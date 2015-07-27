@@ -1,10 +1,10 @@
-ffe7675e94dec66825ebe037a876dbbd *DESCRIPTION
+f73cb33899d2516f440a675ca66a0be8 *DESCRIPTION
 3bdef3fc878a86593fdb285261a73222 *INSTALL
-889acdb0cb3150aa80576880b47bcd89 *NAMESPACE
-bc7130f2a137102a5a99f6c8e4c2f7d1 *NEWS
+5e44c22068ed5fde0dbbbc38c0392bda *NAMESPACE
+588951c384f5caeb6e0c89cdd3b47d83 *NEWS
 00f450805cd500a1fff817be478f3210 *R/parse-multipart.R
-69fce63b4b30c797419597eb00217a44 *R/plots.R
-d70fbf48cbf72cebcaa2a3660c42da00 *R/run.R
+9a1f87d1a3bc9eb52447a6a6062f1c28 *R/plots.R
+3a9d5e5126e04b44d3e74888f3176308 *R/run.R
 d8292d0cab55cde69a0aa510d3380f41 *R/tools.R
 d9cce0103490ef2cfa6718e2abd78827 *R/webresult.R
 c98c6c4af2744aecf95682a9641decc5 *configure
@@ -27,7 +27,7 @@ d1712761418fe95e76620311b7fd52ac *inst/web.R/index.R
 2bc42bf04ffa267af09e799ad79be613 *inst/web/index.html
 7b7e0bcb5a0bd0a3ef9686562414ac77 *man/FastRWeb.Rd
 a43d01968d78e932ac2c25e72e84945b *man/WebPlot.Rd
-db61295b9b10e59761b831a396323048 *man/WebResult.Rd
+0f8b8a8a0eb41fdd83c6d96de5562e1c *man/WebResult.Rd
 85c9440e253d5f3e94d1f4a46bcdb884 *man/add.header.Rd
 eeb1b699e0eb5121e002d3703ff32e70 *man/done.Rd
 13f66e2274d5add595a15aefd5e27eab *man/oinput.Rd
@@ -36,7 +36,7 @@ eeb1b699e0eb5121e002d3703ff32e70 *man/done.Rd
 0718a9c66d8197dea3a21ede732932ab *man/requests.Rd
 a34120bdf5034a26b8753d1ae0cbf8ed *src/Makefile
 a34120bdf5034a26b8753d1ae0cbf8ed *src/Makefile.win
-f135abfb26c85b72a04bf2545114f760 *src/Rcgi/Makefile.in
+f51f279749fba8af0aaeb02d6cc29904 *src/Rcgi/Makefile.in
 417c899667d1187d6e96d6c1d47944f5 *src/Rcgi/Makefile.win
 3c8d3f78abcd109c2849ce97d7af0140 *src/Rcgi/Rcgi.cc
 ffb2374bbbfb4b24fbb545eb45a39454 *src/Rcgi/Rconnection.cc

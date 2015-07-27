@@ -1,15 +1,15 @@
 Package: FastRWeb
-Version: 1.1-0
+Version: 1.1-1
 Title: Fast Interactive Framework for Web Scripting Using R
-Author: Simon Urbanek <Simon.Urbanek@r-project.org>, Jeffrey Horner
-        <jeffrey.horner@gmail.com>
+Author: Simon Urbanek <Simon.Urbanek@r-project.org>, Jeffrey Horner <jeffrey.horner@gmail.com>
 Maintainer: Simon Urbanek <Simon.Urbanek@r-project.org>
-Depends: R (>= 2.0.0), Cairo
+Depends: R (>= 2.0.0)
+Imports: base64enc, grDevices, stats, utils, Cairo
 Suggests: Rserve
-Description: This package provides a way of creating rich web contents
-        using fast-response R
+Description: Infrastrcture for creating rich, dynamic web content using R scripts while maintaining very fast response time.
 License: GPL-2
 URL: http://www.rforge.net/FastRWeb/
-Packaged: 2012-12-15 17:23:10 UTC; svnuser
+NeedsCompilation: yes
+Packaged: 2015-07-27 21:28:00 UTC; urbanek
 Repository: CRAN
-Date/Publication: 2012-12-15 19:26:18
+Date/Publication: 2015-07-29 07:17:59
