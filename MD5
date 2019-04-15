@@ -1,4 +1,4 @@
-f73cb33899d2516f440a675ca66a0be8 *DESCRIPTION
+eed5b4186600d79f0241d33c312b1565 *DESCRIPTION
 3bdef3fc878a86593fdb285261a73222 *INSTALL
 5e44c22068ed5fde0dbbbc38c0392bda *NAMESPACE
 588951c384f5caeb6e0c89cdd3b47d83 *NEWS
@@ -7,8 +7,8 @@ f73cb33899d2516f440a675ca66a0be8 *DESCRIPTION
 3a9d5e5126e04b44d3e74888f3176308 *R/run.R
 d8292d0cab55cde69a0aa510d3380f41 *R/tools.R
 d9cce0103490ef2cfa6718e2abd78827 *R/webresult.R
-c98c6c4af2744aecf95682a9641decc5 *configure
-f5d808564d7d01775666fec30fe45ad7 *configure.ac
+4e7c77fae84719a7ae06959004c32a3d *configure
+d2ca7ff0d0e031f94522e8a9324137f0 *configure.ac
 7a2c4ecb3063d2bffe4d99def0b56ac2 *configure.win
 34ad95973b41ed80bc52f7324683602f *inst/code/README
 2052aeb3f56c4bdfede2d0acd143e341 *inst/code/rserve.R
@@ -42,5 +42,5 @@ f51f279749fba8af0aaeb02d6cc29904 *src/Rcgi/Makefile.in
 ffb2374bbbfb4b24fbb545eb45a39454 *src/Rcgi/Rconnection.cc
 0fc2ada8ba900f0bd56b570bdc7566a9 *src/Rcgi/Rconnection.h
 eb61391c0de887f3fff54195476594c8 *src/Rcgi/Rsrv.h
-2cab033028db66adf3cc9b2d9e05c16b *src/Rcgi/config.h.in
+061125c2b932eb7a0b9310320dbfb74b *src/Rcgi/config.h.in
 b7b619cc75a34069f269a032d1b4575e *src/Rcgi/sisocks.h
