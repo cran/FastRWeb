@@ -48,6 +48,8 @@
 
 #define sockerrno WSAGetLastError()
 
+/* more recent WinGW has those defined, olders don't */
+#ifndef ECONNREFUSED
 #define ECONNREFUSED WSAECONNREFUSED
 #define EADDRINUSE WSAEADDRINUSE
 #define ENOTSOCK WSAENOTSOCK
@@ -63,6 +65,7 @@
 #define EFAULT WSAEFAULT
 #define EWOULDBLOCK WSAEWOULDBLOCK
 #define EACCES WSAEACCES
+#endif
 
 #ifdef USE_SNPRINTF
 int snprintf(char *buf, int len, char *fmt, ...)
@@ -86,6 +89,8 @@ int snprintf(char *buf, int len, char *fmt, ...)
 
 #ifdef windows
 
+#ifdef NEED_INITSOCKS
+
 static int initsocks(void)
 {
   WSADATA dt;
@@ -94,11 +99,17 @@ static int initsocks(void)
 };
 
 #define donesocks() WSACleanup()
+#endif
+
 #else
  
 /* no stupid stuff necessary for unix */
 #define initsocks()
 #define donesocks()
+
+#ifndef INVALID_SOCKET
+#define INVALID_SOCKET -1
+#endif
 
 #endif
 
@@ -179,6 +190,7 @@ int sockerrorcheck(char *sn, int rtb, int res) {
 
 #endif
 
+#ifdef BUILD_SIN
 static struct sockaddr *build_sin(struct sockaddr_in *sa,char *ip,int port) {
   memset(sa,0,sizeof(struct sockaddr_in));
   sa->sin_family=AF_INET;
@@ -186,5 +198,6 @@ static struct sockaddr *build_sin(struct sockaddr_in *sa,char *ip,int port) {
   sa->sin_addr.s_addr=(ip)?inet_addr(ip):htonl(INADDR_ANY);
   return (struct sockaddr*)sa;
 };
-          
+#endif
+
 #endif /* __SISOCKS_H__ */

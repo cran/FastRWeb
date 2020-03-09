@@ -20,7 +20,6 @@ AC_SUBST(R_HOME)
 AC_SUBST(RINC)
 AC_SUBST(RLD)
 
-AC_LANG(C)
 # Checks for programs.
 AC_PROG_CC
 
@@ -99,6 +98,11 @@ if test x"$ac_cv_func_connect" = x"no"; then
         AC_DEFINE(HAVE_CONNECT, 1, [ ])
     fi
 fi
+
+AC_SUBST(CC)
+AC_SUBST(CXX)
+AC_SUBST(CFLAGS)
+AC_SUBST(CXXFLAGS)
 
 AC_CONFIG_FILES([src/Rcgi/Makefile])
 AC_OUTPUT

@@ -87,8 +87,9 @@ const char *sock = RSERVE_SOCK;
 
 */
 
-#define MAIN         // we are the main program, we need to define this
-#define SOCK_ERRORS  // we will use verbose socket errors
+#define MAIN            // we are the main program, we need to define this
+#define SOCK_ERRORS     // we will use verbose socket errors
+#define NEED_INITSOCKS  // we use initsocks()
 
 #include "sisocks.h"
 #include "Rconnection.h"
@@ -105,7 +106,7 @@ struct timeval startT, stopT;
 
 /* log access to the log/cgi.log file - if possible */
 static void wlog(const char *cmd, const char *info) {
-    char wfn[512], idb[16], *cookie_end = 0;
+    char wfn[512], *cookie_end = 0;
   snprintf(wfn, 512, "%s/logs/cgi.log", root);
   gettimeofday(&stopT, 0);
   double t1 = (double) startT.tv_usec; t1 *= 0.000001; t1 += (double) startT.tv_sec;

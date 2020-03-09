@@ -89,9 +89,9 @@ class Rmessage {
     Rsize_t length() { return complete?head.len:-1; }
     int is_complete() { return complete; }
     
-    int read(int s);
+    int read(SOCKET s);
     void parse();
-    int send(int s);    
+    int send(SOCKET s);
 };
 
 //===================================== Rexp --- basis for all SEXPs
@@ -115,7 +115,7 @@ public:
 protected:
     // the next two are only cached if requested, no direct access allowed
     int attribs; 
-    char **attrnames;
+    const char **attrnames;
     
     Rexp *master; // if this is set then this Rexp allocated the memory for us, so we are not supposed to free anything; if this is set to "this" then the content is self-allocated, including any data
     int rcount;  // reference count - only for a master - it counts how many children still exist
@@ -134,7 +134,7 @@ public:
     
     virtual void store(char *buf);
     Rexp *attribute(const char *name);
-    char **attributeNames();
+    const char **attributeNames();
     
     virtual Rsize_t length() { return len; }
     
@@ -195,7 +195,7 @@ private:
 
 class Rsymbol : public Rexp {
 protected:
-    char *name;
+    const char *name;
     
 public:
     Rsymbol(Rmessage *msg) : Rexp(msg)
@@ -204,7 +204,7 @@ public:
     Rsymbol(unsigned int *ipos, Rmessage *imsg) : Rexp(ipos, imsg)
     { name=""; fix_content(); }
     
-    char *symbolName() { return name; }
+    const char *symbolName() { return name; }
     
     virtual std::ostream& os_print (std::ostream& os) {
         return os << "Rsymbol[" << symbolName() <<"]";
@@ -228,7 +228,7 @@ public:
     /*Rstring(const char *str) : Rexp(XT_STR, str, strlen(str)+1) {}*/
     
     char **strings() { return cont; }
-    char *stringAt(int i) { return (i<0||i>=nel)?0:cont[i]; }
+    char *stringAt(int i) { return (i < 0 || ((unsigned int) i) >= nel) ? 0 : cont[i]; }
     char *string() { return stringAt(0); }
     unsigned int count() { return nel; }
 
@@ -238,7 +238,7 @@ public:
  private:
     void decode() {
       char *c = (char*) data;
-      int i = 0;
+      unsigned int i = 0;
       nel = 0;
       while (i < len) { if (!c[i]) nel++; i++; }
       if (nel) {

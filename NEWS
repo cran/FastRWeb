@@ -1,3 +1,33 @@
+1.1-3	(2020-03-10)
+    o	use AC_LANG_SOURCE() in configure to avoid warnings
+
+    o	minor fix in the documentation
+
+
+1.1-2	(2020-03-02)
+    o	enhance output functions to provide an option to escape
+	special HTML characters. This (escape=TRUE)is now the default
+	for oprint(), ohead() and otable().
+
+    o	added FastRWeb:::htmlEscape(). It is currently not exported as
+	to not clash with htmltools.
+
+    o	append `.pdf` and `.svg` to the temporary file name in
+	`WebPlot` for PDF and SVG output, because those back-ends
+	always append the extension if not present. Also change
+	tag type from "img" to "embed" for PDF and add the correct
+	mime type for type="svg".
+
+    o	clean up build system and compiler warnings, restore
+	support for Windows including multi-arch builds.
+	NOTE: Rcgi executables are now in the $(R_ARCH)
+	subdirectory of cgi-bin, so pick the the desired
+	architecture and install in cgi-bin as needed.
+
+    o	in Rserve stand-alone setup pass the status code from
+	the Status: header to the client in the response (#6)
+
+
 1.1-1	(2015-07-27)
     o	clear the output buffer before serving run() scripts
 
