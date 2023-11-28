@@ -1,7 +1,7 @@
-be7a6682261ff34e6457d411b342961b *DESCRIPTION
+23c199151d8c3a269372bf47140b7756 *DESCRIPTION
 3bdef3fc878a86593fdb285261a73222 *INSTALL
 5e44c22068ed5fde0dbbbc38c0392bda *NAMESPACE
-30a6c658477574c1d93230e25f6b1d67 *NEWS
+323d086834111c01481567484780732a *NEWS
 00f450805cd500a1fff817be478f3210 *R/parse-multipart.R
 c85032270c03aef1f51d025a2e26ef0d *R/plots.R
 7f81a6ed18d4e0d45d3543c3986779ee *R/run.R
@@ -38,7 +38,7 @@ a34120bdf5034a26b8753d1ae0cbf8ed *src/Makefile
 30ae322d4f7fb73cc80c6cdc629b4316 *src/Rcgi/Makefile.in
 417c899667d1187d6e96d6c1d47944f5 *src/Rcgi/Makefile.win
 4cc4d2dcfb2e41b14f804f9c6411228f *src/Rcgi/Rcgi.cc
-ffbfe24b2b4ad9c5507a0746c6804c27 *src/Rcgi/Rconnection.cc
+7520d59cfcbdf1a08052d55aee8a9b8a *src/Rcgi/Rconnection.cc
 9738c7054d52d7cb0d03614d132ffe95 *src/Rcgi/Rconnection.h
 eb61391c0de887f3fff54195476594c8 *src/Rcgi/Rsrv.h
 a08e0316f2505ddb4f2921ae5676e0e2 *src/Rcgi/config.h.in
